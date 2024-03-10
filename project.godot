@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="abermation"
-run/main_scene="res://game.tscn"
+run/main_scene="res://project/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://project/items/item_ABC.png"
 
 [autoload]
 
-Global="*res://Global.gd"
+Global="*res://project/GameManager/Global.gd"
 
 [display]
 
