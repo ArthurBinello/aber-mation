@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://capc2qck1rhku"]
+
+[ext_resource type="PackedScene" uid="uid://buq4741addkl7" path="res://spawner.tscn" id="1_gua13"]
+[ext_resource type="PackedScene" uid="uid://do75vks8wp8gw" path="res://goal.tscn" id="2_m2453"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Goal" parent="." instance=ExtResource("2_m2453")]
+position = Vector2(42, 365)
+
+[node name="Spawner" parent="." instance=ExtResource("1_gua13")]
+position = Vector2(42, 42)

@@ -1,0 +1,161 @@
+[gd_scene load_steps=19 format=3 uid="uid://capc2qck1rhku"]
+
+[ext_resource type="Script" path="res://GameManager.gd" id="1_0sg6s"]
+[ext_resource type="PackedScene" uid="uid://buq4741addkl7" path="res://conveyor_belts/spawner.tscn" id="1_gua13"]
+[ext_resource type="PackedScene" uid="uid://do75vks8wp8gw" path="res://goal/goal.tscn" id="2_m2453"]
+[ext_resource type="Texture2D" uid="uid://cblvulfyqsl8w" path="res://background.png" id="2_nbyjf"]
+[ext_resource type="PackedScene" uid="uid://dp5v86vvdxcrn" path="res://builder/builder.tscn" id="3_b5mpx"]
+[ext_resource type="PackedScene" uid="uid://ccu1l45q8br8c" path="res://destroyer/destroyer.tscn" id="4_h670d"]
+[ext_resource type="Texture2D" uid="uid://by4f1p211he7x" path="res://items/item_ABC.png" id="6_goonv"]
+[ext_resource type="Texture2D" uid="uid://cvf8wmivnjgmc" path="res://buttons/button_a_up.png" id="7_os4jt"]
+[ext_resource type="Texture2D" uid="uid://cmsh2dtxhv3l8" path="res://items/item_bad.png" id="7_xh6cq"]
+[ext_resource type="Texture2D" uid="uid://cvsj5ts016b5w" path="res://buttons/button_a_down.png" id="8_syrif"]
+[ext_resource type="Texture2D" uid="uid://c18d2mp4thofm" path="res://buttons/button_b_up.png" id="9_f0iv1"]
+[ext_resource type="Texture2D" uid="uid://bo26bhvt2bmgv" path="res://buttons/button_b_down.png" id="10_sh3ef"]
+[ext_resource type="Texture2D" uid="uid://b3r0gn0jkp2wa" path="res://buttons/button_c_up.png" id="11_unq43"]
+[ext_resource type="Texture2D" uid="uid://cjef2pd2qpypc" path="res://buttons/button_c_down.png" id="12_a7iir"]
+[ext_resource type="Texture2D" uid="uid://dj6umjykihp3b" path="res://buttons/button_d_up.png" id="13_eulhb"]
+[ext_resource type="Texture2D" uid="uid://0b1g7tsk5k3j" path="res://buttons/button_d_down.png" id="14_w6tr8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca7v0"]
+texture = ExtResource("2_nbyjf")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_000gw"]
+sources/0 = SubResource("TileSetAtlasSource_ca7v0")
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_0sg6s")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Background" type="TileMap" parent="."]
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_000gw")
+format = 2
+layer_0/tile_data = PackedInt32Array(655361, 131072, 1, 589825, 131072, 1, 589824, 131072, 1, 524288, 131072, 1, 458752, 131072, 1, 393216, 131072, 1, 327680, 131072, 1, 262144, 0, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 0, 0, 0, 1, 131072, 1, 2, 131072, 0, 3, 0, 0, 4, 131072, 1, 5, 131072, 0, 6, 0, 0, 65542, 0, 0, 131078, 0, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0, 393222, 0, 0, 458758, 65536, 2, 524294, 65536, 1, 589830, 131072, 2, 655366, 0, 0, 720902, 0, 0, 786436, 131072, 1, 786435, 131072, 1, 786434, 131072, 1, 786433, 131072, 1, 720897, 131072, 1, 720896, 131072, 1, 655360, 131072, 1, 786432, 131072, 1, 851968, 131072, 1, 917504, 131072, 1, 983040, 131072, 1, 983041, 131072, 1, 917505, 131072, 1, 851969, 131072, 1, 851970, 131072, 1, 917506, 131072, 1, 983042, 131072, 1, 983043, 131072, 1, 917507, 131072, 1, 851971, 131072, 1, 851972, 131072, 1, 917508, 131072, 1, 983044, 131072, 1, 983045, 131072, 1, 917509, 131072, 1, 851973, 131072, 1, 786437, 131072, 1, 786438, 0, 0, 851974, 131072, 1, 917510, 131072, 1, 983046, 131072, 1, 983047, 131072, 1, 917511, 131072, 1, 851975, 65536, 0, 786439, 65536, 1, 720903, 65536, 1, 655367, 65536, 1, 589831, 65536, 1, 524295, 65536, 1, 458759, 65536, 1, 393223, 65536, 1, 327687, 65536, 1, 262151, 65536, 1, 196615, 65536, 1, 131079, 65536, 1, 65543, 65536, 1, 7, 131072, 1, 8, 131072, 0, 65544, 131072, 0, 131080, 131072, 0, 196616, 131072, 0, 262152, 131072, 0, 327688, 131072, 0, 393224, 131072, 0, 458760, 131072, 0, 524296, 131072, 0, 589832, 131072, 0, 655368, 131072, 0, 720904, 131072, 0, 786440, 131072, 0, 851976, 131072, 1, 917512, 131072, 1, 983048, 131072, 1, 720899, 131072, 1, 655363, 131072, 1, 589828, 65536, 0, 524292, 65536, 1, 524293, 65536, 1, 524291, 0, 0, 589827, 131072, 1, 589826, 131072, 1, 655362, 131072, 1, 720898, 131072, 1, 720900, 131072, 1, 720901, 131072, 1, 655365, 131072, 1, 589829, 65536, 0, 655364, 131072, 1, 458757, 0, 2, 393221, 131072, 0, 327685, 131072, 0, 262149, 131072, 0, 196613, 131072, 0, 131077, 131072, 0, 65541, 131072, 0, 65540, 65536, 1, 65539, 0, 0, 65538, 131072, 0, 65537, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 262145, 65536, 1, 327681, 65536, 0, 393217, 131072, 1, 458753, 131072, 1, 524289, 131072, 1, 524290, 131072, 1, 458754, 131072, 1, 393218, 131072, 1, 327682, 65536, 0, 262146, 65536, 1, 196610, 0, 2, 131074, 131072, 0, 458755, 0, 0, 393219, 0, 0, 327683, 131072, 2, 262147, 65536, 1, 196611, 65536, 2, 131075, 0, 0, 393220, 65536, 1, 458756, 65536, 1, 327684, 65536, 1, 196612, 65536, 1, 131076, 65536, 1, 262148, 65536, 1)
+
+[node name="Spawners" type="Node2D" parent="."]
+
+[node name="Spawner" parent="Spawners" instance=ExtResource("1_gua13")]
+position = Vector2(72, 24)
+
+[node name="Spawner2" parent="Spawners" instance=ExtResource("1_gua13")]
+position = Vector2(216, 24)
+item_type = "B"
+
+[node name="Spawner3" parent="Spawners" instance=ExtResource("1_gua13")]
+position = Vector2(360, 24)
+item_type = "C"
+nb_segments = 7
+
+[node name="Builders" type="Node2D" parent="."]
+
+[node name="Builder" parent="Builders" node_paths=PackedStringArray("left_incoming", "right_incoming") instance=ExtResource("3_b5mpx")]
+left_incoming = NodePath("../../Spawners/Spawner")
+right_incoming = NodePath("../../Spawners/Spawner2")
+
+[node name="Builder2" parent="Builders" node_paths=PackedStringArray("left_incoming", "right_incoming") instance=ExtResource("3_b5mpx")]
+left_incoming = NodePath("../Builder")
+right_incoming = NodePath("../../Spawners/Spawner3")
+
+[node name="Destroyers" type="Node2D" parent="."]
+
+[node name="Destroyer" parent="Destroyers" node_paths=PackedStringArray("conveyor") instance=ExtResource("4_h670d")]
+conveyor = NodePath("../../Spawners/Spawner")
+texture_name = "a"
+
+[node name="Destroyer2" parent="Destroyers" node_paths=PackedStringArray("conveyor") instance=ExtResource("4_h670d")]
+conveyor = NodePath("../../Spawners/Spawner2")
+texture_name = "b"
+
+[node name="Destroyer3" parent="Destroyers" node_paths=PackedStringArray("conveyor") instance=ExtResource("4_h670d")]
+conveyor = NodePath("../../Builders/Builder")
+texture_name = "c"
+
+[node name="Destroyer4" parent="Destroyers" node_paths=PackedStringArray("conveyor") instance=ExtResource("4_h670d")]
+conveyor = NodePath("../../Spawners/Spawner3")
+texture_name = "d"
+
+[node name="Goal" parent="." node_paths=PackedStringArray("incoming") instance=ExtResource("2_m2453")]
+incoming = NodePath("../Builders/Builder2")
+
+[node name="Buttons" type="Node2D" parent="."]
+position = Vector2(0, 704)
+
+[node name="TextureButton" type="TextureButton" parent="Buttons"]
+offset_left = 8.0
+offset_top = -32.0
+offset_right = 40.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("7_os4jt")
+texture_pressed = ExtResource("8_syrif")
+
+[node name="TextureButton2" type="TextureButton" parent="Buttons"]
+offset_left = 114.0
+offset_top = -32.0
+offset_right = 146.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("9_f0iv1")
+texture_pressed = ExtResource("10_sh3ef")
+
+[node name="TextureButton3" type="TextureButton" parent="Buttons"]
+offset_left = 220.0
+offset_top = -32.0
+offset_right = 252.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("11_unq43")
+texture_pressed = ExtResource("12_a7iir")
+
+[node name="TextureButton4" type="TextureButton" parent="Buttons"]
+offset_left = 326.0
+offset_top = -32.0
+offset_right = 358.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("13_eulhb")
+texture_pressed = ExtResource("14_w6tr8")
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Score" type="Node2D" parent="UserInterface"]
+position = Vector2(32, 592)
+
+[node name="Sprite2D" type="Sprite2D" parent="UserInterface/Score"]
+scale = Vector2(3, 3)
+texture = ExtResource("6_goonv")
+
+[node name="ScoreLabel" type="Label" parent="UserInterface/Score"]
+offset_left = 24.0
+offset_top = -11.0
+offset_right = 64.0
+offset_bottom = 12.0
+text = "x 0"
+
+[node name="Lives" type="Node2D" parent="UserInterface"]
+position = Vector2(32, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="UserInterface/Lives"]
+scale = Vector2(3, 3)
+texture = ExtResource("7_xh6cq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="UserInterface/Lives"]
+position = Vector2(48, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("7_xh6cq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="UserInterface/Lives"]
+position = Vector2(96, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("7_xh6cq")

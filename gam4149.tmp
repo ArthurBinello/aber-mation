@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://capc2qck1rhku"]
+
+[ext_resource type="Script" path="res://GameManager.gd" id="1_0sg6s"]
+[ext_resource type="PackedScene" uid="uid://buq4741addkl7" path="res://conveyor_belts/spawner.tscn" id="1_gua13"]
+[ext_resource type="PackedScene" uid="uid://do75vks8wp8gw" path="res://goal/goal.tscn" id="2_m2453"]
+[ext_resource type="PackedScene" uid="uid://dp5v86vvdxcrn" path="res://builder/builder.tscn" id="3_b5mpx"]
+[ext_resource type="PackedScene" uid="uid://ccu1l45q8br8c" path="res://destroyer/destroyer.tscn" id="4_h670d"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_0sg6s")
+
+[node name="Spawners" type="Node2D" parent="."]
+
+[node name="Spawner" parent="Spawners" instance=ExtResource("1_gua13")]
+position = Vector2(72, 24)
+
+[node name="Spawner2" parent="Spawners" instance=ExtResource("1_gua13")]
+position = Vector2(216, 24)
+item_type = "B"
+
+[node name="Spawner3" parent="Spawners" instance=ExtResource("1_gua13")]
+position = Vector2(360, 24)
+item_type = "C"
+nb_segments = 7
+
+[node name="Builders" type="Node2D" parent="."]
+
+[node name="Builder" parent="Builders" node_paths=PackedStringArray("left_incoming", "right_incoming") instance=ExtResource("3_b5mpx")]
+left_incoming = NodePath("../../Spawners/Spawner")
+right_incoming = NodePath("../../Spawners/Spawner2")
+
+[node name="Builder2" parent="Builders" node_paths=PackedStringArray("left_incoming", "right_incoming") instance=ExtResource("3_b5mpx")]
+left_incoming = NodePath("../Builder")
+right_incoming = NodePath("../../Spawners/Spawner3")
+
+[node name="Destroyers" type="Node2D" parent="."]
+
+[node name="Destroyer" parent="Destroyers" node_paths=PackedStringArray("conveyor") instance=ExtResource("4_h670d")]
+conveyor = NodePath("../../Spawners/Spawner")
+
+[node name="Destroyer2" parent="Destroyers" node_paths=PackedStringArray("conveyor") instance=ExtResource("4_h670d")]
+conveyor = NodePath("../../Spawners/Spawner2")
+
+[node name="Destroyer3" parent="Destroyers" node_paths=PackedStringArray("conveyor") instance=ExtResource("4_h670d")]
+conveyor = NodePath("../../Spawners/Spawner3")
+
+[node name="Destroyer4" parent="Destroyers" node_paths=PackedStringArray("conveyor") instance=ExtResource("4_h670d")]
+conveyor = NodePath("../../Builders/Builder")
+
+[node name="Goal" parent="." node_paths=PackedStringArray("incoming") instance=ExtResource("2_m2453")]
+incoming = NodePath("../Builders/Builder2")
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScoreLabel" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score: 0"
