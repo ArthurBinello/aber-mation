@@ -2,7 +2,6 @@ extends Node2D
 
 var lives = 3
 var score = 0
-var high_score = 0
 var speed_increase: float = 1.1
 
 # Called when the node enters the scene tree for the first time.
@@ -33,10 +32,11 @@ func lose_life():
 		get_node("UserInterface/Lives").get_child(lives - 3).modulate = Color(0, 0, 0)
 	if lives <= 0:
 		game_over()
-		print("game over")
 
 
 func game_over():
-	if score > high_score:
-		high_score = score
-	get_tree().paused = true
+	Global.final_score = score
+	if score > Global.high_score:
+		Global.high_score = score
+		Global.new_high_score = true
+	get_tree().change_scene_to_file("res://project/menus/game_over.tscn")
