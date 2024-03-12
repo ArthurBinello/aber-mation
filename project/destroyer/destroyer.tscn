@@ -31,6 +31,6 @@ position = Vector2(48, 0)
 scale = Vector2(3, 3)
 texture = SubResource("AnimatedTexture_r141v")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_2r2gk")
 pitch_scale = 4.0

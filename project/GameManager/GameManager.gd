@@ -12,6 +12,7 @@ func _ready():
 	get_node("Buttons/TextureButton2").connect("button_down", get_node("Destroyers/Destroyer2").destroy)
 	get_node("Buttons/TextureButton3").connect("button_down", get_node("Destroyers/Destroyer3").destroy)
 	get_node("Buttons/TextureButton4").connect("button_down", get_node("Destroyers/Destroyer4").destroy)
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

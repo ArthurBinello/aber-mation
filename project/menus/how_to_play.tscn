@@ -1,0 +1,321 @@
+[gd_scene load_steps=21 format=3 uid="uid://yhqw024qwev3"]
+
+[ext_resource type="Script" path="res://project/menus/how_to_play.gd" id="1_e8j6o"]
+[ext_resource type="Texture2D" uid="uid://cblvulfyqsl8w" path="res://project/GameManager/background.png" id="1_scdqh"]
+[ext_resource type="FontFile" uid="uid://rcj2rq8sxetw" path="res://project/font.ttf" id="3_beh01"]
+[ext_resource type="Texture2D" uid="uid://bb0c7abh58qk0" path="res://project/menus/menu_button_up.png" id="4_87jkb"]
+[ext_resource type="Texture2D" uid="uid://dmox73k7gq88q" path="res://project/menus/menu_button_down.png" id="5_jbe72"]
+[ext_resource type="AudioStream" uid="uid://xq28fvum4an2" path="res://project/audio/click.wav" id="6_xya50"]
+[ext_resource type="Texture2D" uid="uid://cvf8wmivnjgmc" path="res://project/buttons/button_a_up.png" id="7_jqeus"]
+[ext_resource type="Texture2D" uid="uid://c0dxps0kmk6sg" path="res://project/destroyer/destroyer_a.png" id="8_efljf"]
+[ext_resource type="Texture2D" uid="uid://c7roao3fm0wsd" path="res://project/conveyor_belts/belt.png" id="9_68qut"]
+[ext_resource type="Texture2D" uid="uid://cvsj5ts016b5w" path="res://project/buttons/button_a_down.png" id="9_73xny"]
+[ext_resource type="Texture2D" uid="uid://dtqu8n0l2gw2u" path="res://project/items/item_AB.png" id="10_umows"]
+[ext_resource type="Texture2D" uid="uid://dmsjei7r8bj44" path="res://project/destroyer/destroy_2.png" id="11_tnhf2"]
+[ext_resource type="Texture2D" uid="uid://cepxebvfm6ary" path="res://project/builder/builder.png" id="13_iy3su"]
+[ext_resource type="Texture2D" uid="uid://cs6n7gs8td5q3" path="res://project/items/item_A.png" id="14_n0i88"]
+[ext_resource type="Texture2D" uid="uid://dtynqcqrpdqjo" path="res://project/items/item_B.png" id="15_c42rb"]
+[ext_resource type="Texture2D" uid="uid://cmsh2dtxhv3l8" path="res://project/items/item_bad.png" id="16_3d5jg"]
+[ext_resource type="Texture2D" uid="uid://bswm328umpc07" path="res://project/goal/goal.png" id="17_gua53"]
+[ext_resource type="Texture2D" uid="uid://by4f1p211he7x" path="res://project/items/item_ABC.png" id="18_rs4mp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rqyeg"]
+texture = ExtResource("1_scdqh")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_88akj"]
+sources/0 = SubResource("TileSetAtlasSource_rqyeg")
+
+[node name="HowToPlay" type="Node2D"]
+script = ExtResource("1_e8j6o")
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_88akj")
+format = 2
+layer_0/tile_data = PackedInt32Array(983040, 65536, 1, 8, 131072, 2, 983048, 65536, 2, 983047, 0, 1, 983046, 0, 1, 983045, 0, 1, 983044, 0, 1, 983043, 0, 2, 983042, 65536, 1, 983041, 65536, 1, 917512, 0, 0, 851976, 0, 0, 786440, 0, 0, 720904, 0, 0, 655368, 0, 0, 589832, 0, 0, 524296, 0, 0, 458760, 0, 0, 393224, 0, 0, 327688, 0, 0, 262152, 0, 0, 196616, 0, 0, 131080, 0, 0, 65544, 0, 0, 7, 65536, 0, 6, 65536, 0, 5, 65536, 0, 4, 65536, 0, 3, 65536, 0, 2, 65536, 0, 1, 65536, 0, 0, 65536, 0, 65536, 131072, 0, 131072, 131072, 0, 196608, 131072, 0, 262144, 131072, 0, 327680, 131072, 0, 393216, 131072, 0, 458752, 131072, 0, 524288, 131072, 0, 589824, 131072, 0, 655360, 131072, 0, 720896, 131072, 0, 786432, 131072, 0, 851968, 0, 2, 917504, 65536, 1, 917505, 65536, 1, 851969, 0, 1, 786433, 131072, 1, 720897, 131072, 1, 655361, 131072, 1, 589825, 131072, 1, 524289, 131072, 1, 458753, 131072, 1, 393217, 131072, 1, 327681, 131072, 1, 262145, 131072, 1, 196609, 131072, 1, 131073, 0, 0, 65537, 131072, 1, 65538, 0, 1, 65539, 0, 1, 65540, 0, 1, 65541, 0, 1, 65542, 0, 1, 65543, 131072, 1, 131079, 131072, 0, 196615, 131072, 1, 262151, 131072, 1, 327687, 131072, 1, 393223, 131072, 1, 458759, 131072, 1, 524295, 131072, 1, 589831, 131072, 1, 655367, 131072, 1, 720903, 131072, 1, 786439, 131072, 1, 851975, 131072, 1, 917511, 131072, 1, 917510, 131072, 1, 917509, 131072, 1, 917508, 131072, 1, 917507, 131072, 0, 917506, 65536, 1, 851970, 0, 1, 851971, 131072, 1, 786435, 131072, 1, 786436, 131072, 1, 851972, 131072, 1, 851973, 131072, 1, 851974, 131072, 1, 786434, 131072, 1, 720898, 131072, 1, 720899, 131072, 1, 655363, 131072, 1, 589828, 131072, 1, 655364, 131072, 1, 786437, 131072, 1, 720901, 131072, 1, 720902, 131072, 1, 655366, 131072, 1, 589830, 131072, 1, 524294, 131072, 1, 524293, 131072, 1, 589829, 131072, 1, 655365, 131072, 1, 786438, 131072, 1, 720900, 131072, 1, 589827, 131072, 1, 524292, 131072, 1, 458755, 131072, 1, 393219, 131072, 1, 327683, 131072, 1, 327682, 131072, 1, 393218, 131072, 1, 655362, 131072, 1, 589826, 131072, 1, 524290, 131072, 1, 458754, 131072, 1, 524291, 131072, 1, 458756, 131072, 1, 393220, 131072, 1, 327684, 131072, 1, 458757, 131072, 1, 393221, 131072, 1, 327685, 131072, 1, 262149, 131072, 1, 458758, 131072, 1, 393222, 131072, 1, 327686, 131072, 1, 262150, 131072, 1, 196614, 65536, 0, 131078, 65536, 1, 131077, 65536, 1, 131076, 65536, 1, 131075, 65536, 1, 131074, 65536, 1, 196612, 65536, 0, 196611, 65536, 0, 262147, 131072, 1, 262146, 131072, 1, 196610, 65536, 0, 196613, 65536, 0, 262148, 131072, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 105.0
+offset_top = 98.0
+offset_right = 333.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("3_beh01")
+theme_override_font_sizes/font_size = 32
+text = "How to play"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 22.0
+offset_top = 693.0
+offset_right = 128.0
+offset_bottom = 742.0
+texture_normal = ExtResource("4_87jkb")
+texture_pressed = ExtResource("5_jbe72")
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 13.0
+offset_right = 74.0
+offset_bottom = 33.0
+scale = Vector2(1.25, 1.25)
+theme_override_fonts/font = ExtResource("3_beh01")
+text = "< Back"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_xya50")
+volume_db = 24.0
+
+[node name="Rule1" type="Node2D" parent="."]
+
+[node name="Label2" type="Label" parent="Rule1"]
+offset_left = 156.0
+offset_top = 245.0
+offset_right = 178.0
+offset_bottom = 285.0
+theme_override_fonts/font = ExtResource("3_beh01")
+theme_override_font_sizes/font_size = 32
+text = ">"
+
+[node name="Label3" type="Label" parent="Rule1"]
+offset_left = 263.0
+offset_top = 245.0
+offset_right = 285.0
+offset_bottom = 285.0
+theme_override_fonts/font = ExtResource("3_beh01")
+theme_override_font_sizes/font_size = 32
+text = ">"
+
+[node name="Sprite2D" type="Sprite2D" parent="Rule1"]
+position = Vector2(108, 260)
+scale = Vector2(2, 2)
+texture = ExtResource("7_jqeus")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Rule1"]
+position = Vector2(92, 212)
+scale = Vector2(2, 2)
+texture = ExtResource("8_efljf")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Rule1"]
+position = Vector2(124, 212)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Rule1"]
+position = Vector2(124, 212)
+scale = Vector2(2, 2)
+texture = ExtResource("10_umows")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Rule1"]
+position = Vector2(341, 212)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Rule1"]
+position = Vector2(234, 212)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Rule1"]
+position = Vector2(234, 212)
+scale = Vector2(2, 2)
+texture = ExtResource("11_tnhf2")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Rule1"]
+position = Vector2(202, 212)
+scale = Vector2(2, 2)
+texture = ExtResource("8_efljf")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Rule1"]
+position = Vector2(309, 212)
+scale = Vector2(2, 2)
+texture = ExtResource("8_efljf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Rule1"]
+position = Vector2(325, 260)
+scale = Vector2(2, 2)
+texture = ExtResource("7_jqeus")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Rule1"]
+position = Vector2(218, 260)
+scale = Vector2(2, 2)
+texture = ExtResource("9_73xny")
+
+[node name="Rule2" type="Sprite2D" parent="."]
+position = Vector2(0, 40)
+
+[node name="Label4" type="Label" parent="Rule2"]
+offset_left = 212.0
+offset_top = 349.0
+offset_right = 234.0
+offset_bottom = 389.0
+theme_override_fonts/font = ExtResource("3_beh01")
+theme_override_font_sizes/font_size = 32
+text = ">"
+
+[node name="Sprite2D10" type="Sprite2D" parent="Rule2"]
+position = Vector2(74, 340)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Rule2"]
+position = Vector2(170, 340)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Rule2"]
+position = Vector2(170, 404)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Rule2"]
+position = Vector2(122, 372)
+scale = Vector2(2, 2)
+texture = ExtResource("13_iy3su")
+
+[node name="Sprite2D22" type="Sprite2D" parent="Rule2"]
+position = Vector2(74, 340)
+scale = Vector2(2, 2)
+texture = ExtResource("14_n0i88")
+
+[node name="Sprite2D23" type="Sprite2D" parent="Rule2"]
+position = Vector2(170, 340)
+scale = Vector2(2, 2)
+texture = ExtResource("15_c42rb")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Rule2"]
+position = Vector2(268, 340)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Rule2"]
+position = Vector2(364, 340)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Rule2"]
+position = Vector2(364, 404)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Rule2"]
+position = Vector2(316, 372)
+scale = Vector2(2, 2)
+texture = ExtResource("13_iy3su")
+
+[node name="Sprite2D24" type="Sprite2D" parent="Rule2"]
+position = Vector2(364, 404)
+scale = Vector2(2, 2)
+texture = ExtResource("10_umows")
+
+[node name="Label5" type="Label" parent="Rule2"]
+offset_left = 212.0
+offset_top = 482.0
+offset_right = 234.0
+offset_bottom = 522.0
+theme_override_fonts/font = ExtResource("3_beh01")
+theme_override_font_sizes/font_size = 32
+text = ">"
+
+[node name="Sprite2D16" type="Sprite2D" parent="Rule2"]
+position = Vector2(74, 474)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Rule2"]
+position = Vector2(170, 474)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Rule2"]
+position = Vector2(170, 538)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Rule2"]
+position = Vector2(122, 506)
+scale = Vector2(2, 2)
+texture = ExtResource("13_iy3su")
+
+[node name="Sprite2D25" type="Sprite2D" parent="Rule2"]
+position = Vector2(74, 474)
+scale = Vector2(2, 2)
+texture = ExtResource("16_3d5jg")
+
+[node name="Sprite2D26" type="Sprite2D" parent="Rule2"]
+position = Vector2(170, 474)
+scale = Vector2(2, 2)
+texture = ExtResource("15_c42rb")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Rule2"]
+position = Vector2(265, 474)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D20" type="Sprite2D" parent="Rule2"]
+position = Vector2(361, 474)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D21" type="Sprite2D" parent="Rule2"]
+position = Vector2(361, 538)
+scale = Vector2(2, 2)
+texture = ExtResource("9_68qut")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Rule2"]
+position = Vector2(313, 506)
+scale = Vector2(2, 2)
+texture = ExtResource("13_iy3su")
+
+[node name="Sprite2D27" type="Sprite2D" parent="Rule2"]
+position = Vector2(361, 538)
+scale = Vector2(2, 2)
+texture = ExtResource("16_3d5jg")
+
+[node name="Rule3" type="Sprite2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Rule3"]
+position = Vector2(201, 695)
+scale = Vector2(3, 3)
+texture = ExtResource("17_gua53")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Rule3/Sprite2D"]
+position = Vector2(0, -8)
+texture = ExtResource("18_rs4mp")
+
+[node name="Label" type="Label" parent="Rule3/Sprite2D"]
+offset_left = 9.0
+offset_top = -14.0
+offset_right = 31.0
+offset_bottom = 8.99999
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_beh01")
+theme_override_font_sizes/font_size = 8
+text = "+1"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Rule3"]
+position = Vector2(331, 692)
+scale = Vector2(3, 3)
+texture = ExtResource("17_gua53")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Rule3/Sprite2D2"]
+position = Vector2(0, -8)
+texture = ExtResource("16_3d5jg")
+
+[node name="Label2" type="Label" parent="Rule3/Sprite2D2"]
+offset_left = 9.33333
+offset_top = -13.3333
+offset_right = 31.3333
+offset_bottom = 9.66668
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_beh01")
+theme_override_font_sizes/font_size = 8
+text = "X"
