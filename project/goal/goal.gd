@@ -29,6 +29,5 @@ func _on_body_entered(body):
 	elif body.item_type == "bad":
 		$AudioStreamPlayer2D.stream = explosion_sound
 		$AudioStreamPlayer2D.play()
-		await get_tree().create_timer(0.37).timeout
 		lose_life.emit()
 	body.queue_free()

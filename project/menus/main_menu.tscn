@@ -55,12 +55,36 @@ volume_db = 24.0
 
 [node name="Buttons" type="Node2D" parent="."]
 
+[node name="MusicButton" type="TextureButton" parent="Buttons"]
+offset_left = 367.0
+offset_top = 12.0
+offset_right = 473.0
+offset_bottom = 61.0
+scale = Vector2(0.5, 0.5)
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("4_fkjyr")
+texture_pressed = ExtResource("5_hox4o")
+
+[node name="MusicLabel" type="Label" parent="Buttons/MusicButton"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 74.0
+offset_bottom = 56.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("3_novtx")
+text = "Music
+"
+horizontal_alignment = 1
+
 [node name="StartButton" type="TextureButton" parent="Buttons"]
 offset_left = 108.0
 offset_top = 575.0
 offset_right = 214.0
 offset_bottom = 624.0
 scale = Vector2(2, 2)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_fkjyr")
 texture_pressed = ExtResource("5_hox4o")
 
@@ -81,6 +105,7 @@ offset_top = 383.0
 offset_right = 217.0
 offset_bottom = 432.0
 scale = Vector2(2, 2)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_fkjyr")
 texture_pressed = ExtResource("5_hox4o")
 

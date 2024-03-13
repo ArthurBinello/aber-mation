@@ -57,6 +57,7 @@ offset_left = 22.0
 offset_top = 693.0
 offset_right = 128.0
 offset_bottom = 742.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_87jkb")
 texture_pressed = ExtResource("5_jbe72")
 
@@ -75,6 +76,17 @@ stream = ExtResource("6_xya50")
 volume_db = 24.0
 
 [node name="Rule1" type="Node2D" parent="."]
+position = Vector2(0, 12)
+
+[node name="Label4" type="Label" parent="Rule1"]
+offset_left = 40.0
+offset_top = 150.0
+offset_right = 478.0
+offset_bottom = 193.0
+theme_override_fonts/font = ExtResource("3_beh01")
+theme_override_font_sizes/font_size = 16
+text = "Press the corresponding buttons to
+remove the component in front of it"
 
 [node name="Label2" type="Label" parent="Rule1"]
 offset_left = 156.0
@@ -153,137 +165,157 @@ texture = ExtResource("9_73xny")
 position = Vector2(0, 40)
 
 [node name="Label4" type="Label" parent="Rule2"]
+offset_left = 64.0
+offset_top = 291.0
+offset_right = 376.0
+offset_bottom = 334.0
+theme_override_fonts/font = ExtResource("3_beh01")
+theme_override_font_sizes/font_size = 16
+text = "Components combine into items
+Avoid making aberrations"
+
+[node name="Label6" type="Label" parent="Rule2"]
 offset_left = 212.0
-offset_top = 349.0
+offset_top = 363.0
 offset_right = 234.0
-offset_bottom = 389.0
+offset_bottom = 403.0
 theme_override_fonts/font = ExtResource("3_beh01")
 theme_override_font_sizes/font_size = 32
 text = ">"
 
-[node name="Sprite2D10" type="Sprite2D" parent="Rule2"]
-position = Vector2(74, 340)
+[node name="Sprite2D10" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(-138, -9)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D11" type="Sprite2D" parent="Rule2"]
-position = Vector2(170, 340)
+[node name="Sprite2D11" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(-42, -9)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D12" type="Sprite2D" parent="Rule2"]
-position = Vector2(170, 404)
+[node name="Sprite2D12" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(-42, 55)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D5" type="Sprite2D" parent="Rule2"]
-position = Vector2(122, 372)
+[node name="Sprite2D5" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(-90, 23)
 scale = Vector2(2, 2)
 texture = ExtResource("13_iy3su")
 
-[node name="Sprite2D22" type="Sprite2D" parent="Rule2"]
-position = Vector2(74, 340)
+[node name="Sprite2D22" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(-138, -9)
 scale = Vector2(2, 2)
 texture = ExtResource("14_n0i88")
 
-[node name="Sprite2D23" type="Sprite2D" parent="Rule2"]
-position = Vector2(170, 340)
+[node name="Sprite2D23" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(-42, -9)
 scale = Vector2(2, 2)
 texture = ExtResource("15_c42rb")
 
-[node name="Sprite2D13" type="Sprite2D" parent="Rule2"]
-position = Vector2(268, 340)
+[node name="Sprite2D13" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(56, -9)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D14" type="Sprite2D" parent="Rule2"]
-position = Vector2(364, 340)
+[node name="Sprite2D14" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(152, -9)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D15" type="Sprite2D" parent="Rule2"]
-position = Vector2(364, 404)
+[node name="Sprite2D15" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(152, 55)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D6" type="Sprite2D" parent="Rule2"]
-position = Vector2(316, 372)
+[node name="Sprite2D6" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(104, 23)
 scale = Vector2(2, 2)
 texture = ExtResource("13_iy3su")
 
-[node name="Sprite2D24" type="Sprite2D" parent="Rule2"]
-position = Vector2(364, 404)
+[node name="Sprite2D24" type="Sprite2D" parent="Rule2/Label6"]
+position = Vector2(152, 55)
 scale = Vector2(2, 2)
 texture = ExtResource("10_umows")
 
 [node name="Label5" type="Label" parent="Rule2"]
 offset_left = 212.0
-offset_top = 482.0
+offset_top = 467.0
 offset_right = 234.0
-offset_bottom = 522.0
+offset_bottom = 507.0
 theme_override_fonts/font = ExtResource("3_beh01")
 theme_override_font_sizes/font_size = 32
 text = ">"
 
-[node name="Sprite2D16" type="Sprite2D" parent="Rule2"]
-position = Vector2(74, 474)
+[node name="Sprite2D16" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(-138, -8)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D17" type="Sprite2D" parent="Rule2"]
-position = Vector2(170, 474)
+[node name="Sprite2D17" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(-42, -8)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D18" type="Sprite2D" parent="Rule2"]
-position = Vector2(170, 538)
+[node name="Sprite2D18" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(-42, 56)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D7" type="Sprite2D" parent="Rule2"]
-position = Vector2(122, 506)
+[node name="Sprite2D7" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(-90, 24)
 scale = Vector2(2, 2)
 texture = ExtResource("13_iy3su")
 
-[node name="Sprite2D25" type="Sprite2D" parent="Rule2"]
-position = Vector2(74, 474)
+[node name="Sprite2D25" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(-138, -8)
 scale = Vector2(2, 2)
 texture = ExtResource("16_3d5jg")
 
-[node name="Sprite2D26" type="Sprite2D" parent="Rule2"]
-position = Vector2(170, 474)
+[node name="Sprite2D26" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(-42, -8)
 scale = Vector2(2, 2)
 texture = ExtResource("15_c42rb")
 
-[node name="Sprite2D19" type="Sprite2D" parent="Rule2"]
-position = Vector2(265, 474)
+[node name="Sprite2D19" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(53, -8)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D20" type="Sprite2D" parent="Rule2"]
-position = Vector2(361, 474)
+[node name="Sprite2D20" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(149, -8)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D21" type="Sprite2D" parent="Rule2"]
-position = Vector2(361, 538)
+[node name="Sprite2D21" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(149, 56)
 scale = Vector2(2, 2)
 texture = ExtResource("9_68qut")
 
-[node name="Sprite2D8" type="Sprite2D" parent="Rule2"]
-position = Vector2(313, 506)
+[node name="Sprite2D8" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(101, 24)
 scale = Vector2(2, 2)
 texture = ExtResource("13_iy3su")
 
-[node name="Sprite2D27" type="Sprite2D" parent="Rule2"]
-position = Vector2(361, 538)
+[node name="Sprite2D27" type="Sprite2D" parent="Rule2/Label5"]
+position = Vector2(149, 56)
 scale = Vector2(2, 2)
 texture = ExtResource("16_3d5jg")
 
 [node name="Rule3" type="Sprite2D" parent="."]
 
+[node name="Label2" type="Label" parent="Rule3"]
+offset_left = 174.0
+offset_top = 608.0
+offset_right = 392.0
+offset_bottom = 674.0
+theme_override_fonts/font = ExtResource("3_beh01")
+text = "Full items give 1 point
+Aberrations lose 1 life
+You have 3 lives"
+
 [node name="Sprite2D" type="Sprite2D" parent="Rule3"]
-position = Vector2(201, 695)
+position = Vector2(201, 727)
 scale = Vector2(3, 3)
 texture = ExtResource("17_gua53")
 
@@ -302,7 +334,7 @@ theme_override_font_sizes/font_size = 8
 text = "+1"
 
 [node name="Sprite2D2" type="Sprite2D" parent="Rule3"]
-position = Vector2(331, 692)
+position = Vector2(331, 724)
 scale = Vector2(3, 3)
 texture = ExtResource("17_gua53")
 
